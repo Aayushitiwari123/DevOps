@@ -29,12 +29,12 @@ pipeline {
             }
           }
           stage('Integration test') {
+            environment {
+                  HOME="."
+                }
             agent {
               docker {
                 reuseNode false
-                environment {
-                  HOME="."
-                }
                 image 'ubuntu'
                 
               }
