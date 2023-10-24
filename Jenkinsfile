@@ -29,16 +29,16 @@ pipeline {
             }
           }
           stage('Integration test') {
-            environment {
-                  HOME="."
-                }
-            agent {
-              docker {
-                reuseNode false
-                image 'ubuntu'
+            // environment {
+            //       HOME="."
+            //     }
+            // agent {
+            //   docker {
+            //     reuseNode false
+            //     image 'ubuntu'
                 
-              }
-            }
+            //   }
+            // }
             steps {
               echo 'Running the integration test...'
             }
